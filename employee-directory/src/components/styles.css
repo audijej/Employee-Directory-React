@@ -22,3 +22,8 @@ h1 {
 input {
     text-align: center;
 }
+
+footer {
+    color: white;
+    font-size: 20px;
+}
