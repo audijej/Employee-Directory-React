@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 function App() {
  return (
    <div className="container">
-     <Jumbotron />
      <EmployeeDiv />
      <Footer />
 
