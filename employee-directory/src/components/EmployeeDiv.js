@@ -15,6 +15,8 @@ class EmployeeDiv extends React.Component {
             employees: [],
             results: [],
             error: null,
+            loading: false,
+            message: ""
         };
 
         //const[employeeState, setEmployeeState] = useState ({
@@ -40,16 +42,29 @@ class EmployeeDiv extends React.Component {
 
     componentDidMount() {
         API.searchEmployee()
-            .then(res => this.setState({ employees: res.data.results }))
+            .then(res => this.setState({ employees: res.data.results, results: res.data.results }))
             .catch(err => console.log(err));
     }
 
     handleInputChange = event => {
-        const searchEmployeeList = event.target.value;
-        this.state.employees.filter(names => {
-            let values = names.name.first.toLowerCase();
-            return values.indexOf(searchEmployeeList.toLowerCase()) !== -1;
-        })
+        event.preventDefault();
+        const query = event.target.value;
+        const filteredResults = this.state.employees.filter(employee => 
+            employee.name.first === query
+        )
+        if ( ! query ) {
+            this.setState({ query, results: {}, message: '' } );
+        } else {
+            this.setState({ results: filteredResults
+            });
+        }
+        // const searchEmployeeList = event.target.value;
+        // const showEmployeeList = this.state.employees.filter(names => {
+        //     let values = names.name.first.toLowerCase();
+        //     return values.indexOf(searchEmployeeList.toLowerCase()) !== -1;
+        // })
+
+        // this.state.results = showEmployeeList
     };
 
 
@@ -76,7 +91,7 @@ class EmployeeDiv extends React.Component {
 
     render() {
         console.log(this.state.employees);
-        const {employees, sortEmployee}  = this.state;
+        const {employees, sortEmployee, search, results}  = this.state;
 
         const sortEmployeeList = employees.sort( (a, b) => {
             const isReversed = (sortEmployee === "asc") ? 1 : -1;
@@ -98,7 +113,7 @@ class EmployeeDiv extends React.Component {
                     employees={this.state.employees}
                 />
                 <EmployeeDetail
-                    employees={sortEmployeeList}
+                    employees={results}
                     onSort={this.onSort}
                     
 
