@@ -49,14 +49,14 @@ class EmployeeDiv extends React.Component {
     handleInputChange = event => {
         event.preventDefault();
         const query = event.target.value;
-        const filteredResults = this.state.employees.filter(employee => 
-            employee.name.first === query
-        )
-        if ( ! query ) {
-            this.setState({ query, results: {}, message: '' } );
+        const filteredResults = this.state.employees.filter(employee => {
+            let values = employee.name.first.toLowerCase();
+            return values.indexOf(query.toLowerCase()) !== -1;
+        })
+        if (!query) {
+            this.setState({ query, results: {}, message: '' });
         } else {
-            this.setState({ results: filteredResults
-            });
+            this.setState({ results: filteredResults });
         }
         // const searchEmployeeList = event.target.value;
         // const showEmployeeList = this.state.employees.filter(names => {
@@ -84,16 +84,16 @@ class EmployeeDiv extends React.Component {
     };
 
     onSort = sortEmployee => {
-        this.setState({sortEmployee})
+        this.setState({ sortEmployee })
     }
 
 
 
     render() {
         console.log(this.state.employees);
-        const {employees, sortEmployee, search, results}  = this.state;
+        const { employees, sortEmployee, search, results } = this.state;
 
-        const sortEmployeeList = employees.sort( (a, b) => {
+        const sortEmployeeList = employees.sort((a, b) => {
             const isReversed = (sortEmployee === "asc") ? 1 : -1;
             return isReversed * a.name.first.localeCompare(b.name.last)
         });
@@ -115,7 +115,7 @@ class EmployeeDiv extends React.Component {
                 <EmployeeDetail
                     employees={results}
                     onSort={this.onSort}
-                    
+
 
                 />
 
