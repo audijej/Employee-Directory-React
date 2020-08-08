@@ -8,10 +8,15 @@ h1 {
     text-align: center;
 }
 
+.headerDiv {
+    text-align: center;
+}
+
 .jumbotron {
     background-color: purple;
     padding:  50px;
-    border: black solid 3px
+    border: black solid 3px;
+    text-align: center;
 }
 
 .container {

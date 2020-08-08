@@ -5,18 +5,18 @@ function SearchEmployee(props) {
   return (
 <form className="search">
       <div className="form-group">
-        <label htmlFor="breed">Employee Name:</label>
+        <label htmlFor="employee">Employee Name:</label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
-          name="breed"
-          list="breeds"
+          name="employees"
+          list="employees"
           type="text"
           className="form-control"
           placeholder="Search an employee here..."
-          id="breed"
+          id="employee"
         />
-        <datalist id="breeds">
+        <datalist id="employees">
           {props.employees.map(employee => (
             <option value={employee} key={employee} />
           ))}

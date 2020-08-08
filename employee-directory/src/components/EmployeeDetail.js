@@ -10,7 +10,7 @@ function EmployeeDetail(props) {
       <thead>
         <tr>
           <th>Profile Pic</th>
-          <th>Name</th>
+          <th><button type="submit" onClick={()=>props.onSort("asc")}>Name</button></th>
           <th>Phone</th>
           <th>Email</th>
         </tr>
