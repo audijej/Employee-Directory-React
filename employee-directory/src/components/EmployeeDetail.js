@@ -18,7 +18,6 @@ function EmployeeDetail(props) {
 
       {props.employees.map(employee => (
 
-
           <tbody key={employee} id="employeeTable" className="list-group-item">
             <tr>
               <td><img alt="avatar" src={employee.picture.medium} className="img-fluid" /></td>

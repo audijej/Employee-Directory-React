@@ -54,7 +54,7 @@ class EmployeeDiv extends React.Component {
             return values.indexOf(query.toLowerCase()) !== -1;
         })
         if (!query) {
-            this.setState({ query, results: {}, message: '' });
+            this.setState({ query, message: '' });
         } else {
             this.setState({ results: filteredResults });
         }
@@ -105,7 +105,7 @@ class EmployeeDiv extends React.Component {
             <div className="headerDiv">
                 <Jumbotron
                 />
-
+<img></img>
                 <h2>Type in a name</h2>
                 <SearchEmployee
                     handleFormSubmit={this.handleFormSubmit}
@@ -115,6 +115,7 @@ class EmployeeDiv extends React.Component {
                 <EmployeeDetail
                     employees={results}
                     onSort={this.onSort}
+                    sortedEmployees={sortEmployeeList}
 
 
                 />
