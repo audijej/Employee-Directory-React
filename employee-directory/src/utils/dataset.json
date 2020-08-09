@@ -1,0 +1,31 @@
+
+{
+
+"results": [
+    {
+        "id": 1,
+        "name": {
+            "first": "Bill",
+            "last": "Gates"
+        },
+        "email": "billgates@example.com",
+        "phone": "02-62-35-18-98",
+        "picture": {
+            "medium": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bill_Gates_2018.jpg/330px-Bill_Gates_2018.jpg"
+        }
+    },
+    {
+        "name": {
+            "first": "Bill",
+            "last": "Gates"
+        },
+        "email": "billgates@example.com",
+        "phone": "02-62-35-18-98",
+        "picture": {
+            "medium": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bill_Gates_2018.jpg/330px-Bill_Gates_2018.jpg"
+        }
+    }
+]
+
+}
+

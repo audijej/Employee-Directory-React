@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import SearchEmployee from "./SearchEmployee"
 import EmployeeDetail from "./EmployeeDetail"
 import Jumbotron from "./Jumbotron";
+import dataset from "../utils/dataset"
 
 import "./styles.css";
 import API from "../utils/API";
+
 
 class EmployeeDiv extends React.Component {
     constructor(props) {
@@ -19,26 +21,8 @@ class EmployeeDiv extends React.Component {
             message: ""
         };
 
-        //const[employeeState, setEmployeeState] = useState ({
-        // search: "",
-        // employees: [],
-        // results: [],
-        // error: null,
-        // })
-
-        this.handleInputChange = this.handleInputChange.bind(this);
-
     }
 
-    // useEffect(() => {
-    //     // For demonstration purposes, we mock an API call.
-    //     API.searchEmployee
-    //      .then((res) => {
-    //       setEmployeeState(res.data.results);
-    //       console.log("Developer State:");
-    //       console.log(developerState);
-    //     });
-    //   }, []);
 
     componentDidMount() {
         API.searchEmployee()
@@ -91,6 +75,7 @@ class EmployeeDiv extends React.Component {
 
     render() {
         console.log(this.state.employees);
+        // console.log(dataset)
         const { employees, sortEmployee, search, results } = this.state;
 
         const sortEmployeeList = employees.sort((a, b) => {
@@ -105,18 +90,18 @@ class EmployeeDiv extends React.Component {
             <div className="headerDiv">
                 <Jumbotron
                 />
-<img></img>
+
                 <h2>Type in a name</h2>
                 <SearchEmployee
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
                     employees={this.state.employees}
                 />
+
                 <EmployeeDetail
                     employees={results}
                     onSort={this.onSort}
                     sortedEmployees={sortEmployeeList}
-
 
                 />
 
