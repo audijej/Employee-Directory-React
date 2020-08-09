@@ -31,24 +31,16 @@ class EmployeeDiv extends React.Component {
     }
 
     handleInputChange = event => {
-        event.preventDefault();
         const query = event.target.value;
         const filteredResults = this.state.employees.filter(employee => {
             let values = employee.name.first.toLowerCase();
             return values.indexOf(query.toLowerCase()) !== -1;
         })
         if (!query) {
-            this.setState({ query, message: '' });
+            this.setState({ query });
         } else {
             this.setState({ results: filteredResults });
         }
-        // const searchEmployeeList = event.target.value;
-        // const showEmployeeList = this.state.employees.filter(names => {
-        //     let values = names.name.first.toLowerCase();
-        //     return values.indexOf(searchEmployeeList.toLowerCase()) !== -1;
-        // })
-
-        // this.state.results = showEmployeeList
     };
 
 
@@ -83,19 +75,15 @@ class EmployeeDiv extends React.Component {
             return isReversed * a.name.first.localeCompare(b.name.last)
         });
 
-        // const sortEmployeeList = employees.sort((a, b) => {a.name.first.localeCompare(b.name.first)})
-        // const isReversed = (sortEmployee === "ascend") ? 1 : -1;
 
         return (
             <div className="headerDiv">
-                <Jumbotron
-                />
-
+                
                 <h2>Type in a name</h2>
                 <SearchEmployee
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
-                    employees={this.state.employees}
+                    employees={employees}
                 />
 
                 <EmployeeDetail

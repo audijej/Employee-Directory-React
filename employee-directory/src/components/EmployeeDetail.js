@@ -4,8 +4,8 @@ import "./styles.css";
 
 function EmployeeDetail(props) {
   return (
-    <div>
-        <table >
+    
+        <table>
 
       <thead>
         <tr>
@@ -18,12 +18,12 @@ function EmployeeDetail(props) {
 
       {props.employees.map(employee => (
 
-          <tbody key={employee} id="employeeTable" className="list-group-item">
+          <tbody key={employee} id="employeeTable">
             <tr>
               <td><img alt="avatar" src={employee.picture.medium} className="img-fluid" /></td>
               <td id="employeeColumnName">{employee.name.first}  {employee.name.last}</td>
-              <td>{employee.phone}</td>
-              <td>{employee.email}</td>
+              <td id="employeeColumnName">{employee.phone}</td>
+              <td id="employeeColumnName">{employee.email}</td>
             </tr>
           </tbody>
 
@@ -32,7 +32,6 @@ function EmployeeDetail(props) {
       ))}
         </table>
 
-    </div>
 
   );
 }

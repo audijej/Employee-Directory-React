@@ -2,7 +2,9 @@ import React from "react";
 import "./styles.css";
 
 function SearchEmployee(props) {
+  
   return (
+    
 <form className="search">
       <div className="form-group">
         <label htmlFor="employee">Employee Name:</label>
@@ -16,11 +18,7 @@ function SearchEmployee(props) {
           placeholder="Search an employee here..."
           id="employee"
         />
-        <datalist id="employees">
-          {props.employees.map(employee => (
-            <option value={employee} key={employee} />
-          ))}
-        </datalist>
+       
         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
           Search
         </button>
