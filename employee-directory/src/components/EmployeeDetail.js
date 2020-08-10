@@ -9,10 +9,10 @@ function EmployeeDetail(props) {
 
       <thead>
         <tr>
-          <th>Profile Pic</th>
-          <th><button type="submit" onClick={()=>props.onSort("asc")}>Name</button></th>
-          <th>Phone</th>
-          <th>Email</th>
+          <th style={{width: "25%", height: "50%"}}>Profile Pic</th>
+          <th style={{width: "50%", height: "50%"}}><button  className="btn btn-success" type="submit" onClick={()=>props.onSort("asc")}>Name</button></th>
+          <th style={{width: "25%", height: "50%"}}>Phone</th>
+          <th style={{width: "25%", height: "50%"}}> Email</th>
         </tr>
       </thead>
 

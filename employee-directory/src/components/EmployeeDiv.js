@@ -79,7 +79,7 @@ class EmployeeDiv extends React.Component {
         return (
             <div className="headerDiv">
                 
-                <h2>Type in a name</h2>
+                <h2 style={{color:"white"}}>Type in a name</h2>
                 <SearchEmployee
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}
