@@ -46,16 +46,13 @@ class EmployeeDiv extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert('A name was submitted: ' + this.state.search);
+        const query = event.target.value;
 
-        API.searchEmployee(this.state.search)
-            .then(res => {
-                if (res.data.status === "error") {
-                    throw new Error(res.data.message);
-                }
-                this.setState({ results: res.data.message, error: "" });
-            })
-            .catch(err => this.setState({ error: err.message }));
+        alert('A name was submitted: ' + query);
+
+        API.searchEmployee()
+        .then(res => this.setState({ employees: res.data.results, results: res.data.results }))
+
     };
 
     onSort = sortEmployee => {
