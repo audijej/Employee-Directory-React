@@ -36,11 +36,10 @@ class EmployeeDiv extends React.Component {
             let values = employee.name.first.toLowerCase();
             return values.indexOf(query.toLowerCase()) !== -1;
         })
-        if (!query) {
-            this.setState({ query });
-        } else {
+        console.log(this.state.employees)
+        
             this.setState({ results: filteredResults });
-        }
+        
     };
 
 

@@ -36,7 +36,6 @@ footer {
 }
 
 #employeeTable {
-    border: solid white 2px;
     width: 100%;
     text-align: center;
 }
@@ -44,24 +43,27 @@ footer {
 table {
     width: 100%;
     text-align: center;
+    border-collapse: collapse;
+    border: solid 1px blue
 }
 
 th {
-    background-color: teal;
     text-align: center;
-    padding: 10px;
+    padding: 50px;
     width: 100%;
     font-size: 20px;
-    height: 25%
+    height: 25%;
+    background-image: url("https://s3.envato.com/files/250447808/preview.jpg");
+
 }
 
-#employeeColumnName {
+/* #employeeColumnName {
     background-color: slateblue;
     color: white;
     font-size: 18px;
     font-weight: bolder;
     text-align: center;
-}
+} */
 
 img {
     height: 50%;
@@ -70,11 +72,16 @@ img {
 tr {
     width: 100%;
     text-align: center;
+    border: solid purple
 }
+
 
 thead {
     display: table-header-group;
-    color: white
+    color: white;
+    border: solid blue 2px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 .search {
@@ -104,3 +111,9 @@ i:hover {
     transition: .7s;
     transform: rotate(360deg);
 }
+
+td {
+    padding: 10px;
+}
+
+

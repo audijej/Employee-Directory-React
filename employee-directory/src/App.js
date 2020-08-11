@@ -11,10 +11,11 @@ function App() {
   return (
     <div>
       <Jumbotron />
-      <EmployeeDiv />
 
 
       <Container>
+      <EmployeeDiv />
+
         <Footer />
       </Container>
 

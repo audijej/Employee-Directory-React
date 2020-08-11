@@ -16,20 +16,18 @@ function EmployeeDetail(props) {
         </tr>
       </thead>
 
-      {props.employees.map(employee => (
+      <tbody id="employeeTable">
+      {props.employees.map((employee, index) => (
 
-          <tbody key={employee} id="employeeTable">
-            <tr>
+            <tr key={index} style={{backgroundColor: index % 2 === 0 ? "#ff33cc" : "#e495e4"}}>
               <td><img alt="avatar" src={employee.picture.medium} className="img-fluid" /></td>
               <td id="employeeColumnName">{employee.name.first}  {employee.name.last}</td>
               <td id="employeeColumnName">{employee.phone}</td>
               <td id="employeeColumnName">{employee.email}</td>
             </tr>
-          </tbody>
 
-
-
-      ))}
+))}
+</tbody>
         </table>
 
 
