@@ -16,7 +16,7 @@
 
 ## Description
 
-This application would allow any employee to easily search the company's directory for a employee/colleague. The application displays the employee's photo, full name, phone number and email address. The user has the ability to sort the employee directory in ascending order.
+This application would allow any employee to easily search the company's directory for an employee/colleague. The application displays the employee's photo, full name, phone number and email address. The user has the ability to sort the employee directory in ascending order.
 
 ## Application
 
