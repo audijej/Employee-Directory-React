@@ -68,7 +68,7 @@ class EmployeeDiv extends React.Component {
 
         const sortEmployeeList = employees.sort((a, b) => {
             const isReversed = (sortEmployee === "asc") ? 1 : -1;
-            return isReversed * a.name.first.localeCompare(b.name.last)
+            return isReversed * a.name.first.localeCompare(b.name.first)
         });
 
 
