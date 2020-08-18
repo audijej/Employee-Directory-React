@@ -2,7 +2,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-(https://https://img.shields.io/badge/Made%20with-React-blue)<img src="logo192.png" width="35" height="35">
+![made-with-React](https://img.shields.io/badge/Made%20with-React-blue.svg)<img src="logo192.png" width="20" height="20">
 
 :100:
 
