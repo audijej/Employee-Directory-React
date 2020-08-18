@@ -1,7 +1,9 @@
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)<img src="logo192.png" width="35" height="35">
-(https://img.shields.io/static/v1?label=Made-with&message=React&color=blue)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+
+(https://https://img.shields.io/badge/Made%20with-React-blue)<img src="logo192.png" width="35" height="35">
+
 :100:
 
 # Employee-Directory-React
